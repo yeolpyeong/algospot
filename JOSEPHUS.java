@@ -1,5 +1,5 @@
 /*
- * JOSEPHUS
+ * 조세푸스 문제
  * https://algospot.com/judge/problem/read/JOSEPHUS
  */
 
