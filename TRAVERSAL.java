@@ -1,5 +1,5 @@
 /*
- * Æ®¸® ¼øÈ¸ ¼ø¼­ º¯°æ
+ * íŠ¸ë¦¬ ìˆœíšŒ ìˆœì„œ ë³€ê²½
  * https://algospot.com/judge/problem/read/TRAVERSAL
  */
 
