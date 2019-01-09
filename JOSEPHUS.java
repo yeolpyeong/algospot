@@ -1,3 +1,8 @@
+/*
+ * JOSEPHUS
+ * https://algospot.com/judge/problem/read/JOSEPHUS
+ */
+
 package algospot;
 
 import java.io.BufferedReader;
