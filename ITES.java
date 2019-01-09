@@ -1,5 +1,5 @@
 /*
- * ©э╟Х ╫ехё ╨п╪╝
+ * Л≥╦ЙЁ└ Л▀═М≤╦ К╤└Л└²
  * https://algospot.com/judge/problem/read/ITES
  */
 
