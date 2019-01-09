@@ -1,5 +1,5 @@
 /*
- * BRACKETS2
+ * Mismatched Brackets
  * https://algospot.com/judge/problem/read/BRACKETS2
  */
 
