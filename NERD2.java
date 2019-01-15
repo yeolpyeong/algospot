@@ -1,5 +1,5 @@
 /*
- * �ʵ��ΰ�, �ʵ尡 �ƴѰ�? 2
+ * 너드인가, 너드가 아닌가? 2
  * https://algospot.com/judge/problem/read/NERD2
  */
 
