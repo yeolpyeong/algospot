@@ -1,5 +1,5 @@
 /*
- * »ðÀÔ Á¤·Ä µÚÁý±â
+ * ì‚½ìž… ì •ë ¬ ë’¤ì§‘ê¸°
  * https://algospot.com/judge/problem/read/INSERTION
  */
 
