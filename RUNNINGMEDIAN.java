@@ -1,5 +1,5 @@
 /*
- * º¯È­ÇÏ´Â Áß°£ °ª
+ * ë³€í™”í•˜ëŠ” ì¤‘ê°„ ê°’
  * https://algospot.com/judge/problem/read/RUNNINGMEDIAN
  */
 
