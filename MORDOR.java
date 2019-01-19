@@ -1,5 +1,5 @@
 /*
- * µî»ê·Î
+ * ë“±ì‚°ë¡œ
  * https://algospot.com/judge/problem/read/MORDOR
  */
 
