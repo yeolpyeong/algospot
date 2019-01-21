@@ -1,5 +1,5 @@
 /*
- * °í´ë¾î »çÀü
+ * ê³ ëŒ€ì–´ ì‚¬ì „
  * https://algospot.com/judge/problem/read/DICTIONARY
  */
 
