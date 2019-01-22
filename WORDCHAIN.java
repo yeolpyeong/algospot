@@ -1,5 +1,5 @@
 /*
- * ´Ü¾î Á¦ÇÑ ³¡¸»ÀÕ±â
+ * ë‹¨ì–´ ì œí•œ ëë§ì‡ê¸°
  * https://algospot.com/judge/problem/read/WORDCHAIN
  */
 
