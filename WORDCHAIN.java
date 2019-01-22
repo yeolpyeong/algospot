@@ -48,14 +48,14 @@ public class WORDCHAIN {
 			if (isEuler(indegree, outdegree)) {
 				for (int first = 0; first < 26; first++) {
 					if (outdegree[first] == indegree[first] + 1) {
-						dfs(wordchain, first);
+						getEuler(wordchain, first);
 						break;
 					}
 				}
 
 				for (int first = 0; first < 26; first++) {
 					if (outdegree[first] > 0) {
-						dfs(wordchain, first);
+						getEuler(wordchain, first);
 						break;
 					}
 				}
@@ -87,11 +87,11 @@ public class WORDCHAIN {
 		return difference == 0 || difference == 2 ? true : false;
 	}
 
-	public static void dfs(Stack<String> wordchain, int first) {
+	public static void getEuler(Stack<String> wordchain, int first) {
 		for (int last = 0; last < 26; last++) {
 			if (adj[first][last] > 0) {
 				adj[first][last]--;
-				dfs(wordchain, last);
+				getEuler(wordchain, last);
 
 				wordchain.push(dictionary.get(first * 26 + last).remove(0));
 			}
