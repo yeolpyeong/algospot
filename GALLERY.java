@@ -1,5 +1,5 @@
 /*
- * °¨½Ã Ä«¸Ş¶ó ¼³Ä¡
+ * ê°ì‹œ ì¹´ë©”ë¼ ì„¤ì¹˜
  * https://algospot.com/judge/problem/read/GALLERY
  */
 
