@@ -3,8 +3,6 @@
  * https://algospot.com/judge/problem/read/WORDCHAIN
  */
 
-package algospot;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -16,6 +14,26 @@ import java.util.Stack;
 public class WORDCHAIN {
 	static int[][] adj;
 	static Map<Integer, ArrayList<String>> dictionary;
+
+	public static boolean isEuler(int[] outdegree, int[] indegree) {
+		int difference = 0;
+		for (int alphabet = 0; alphabet < 26; alphabet++) {
+			difference += Math.abs(outdegree[alphabet] - indegree[alphabet]);
+		}
+
+		return difference == 0 || difference == 2 ? true : false;
+	}
+
+	public static void getEuler(Stack<String> wordchain, int first) {
+		for (int last = 0; last < 26; last++) {
+			if (adj[first][last] > 0) {
+				adj[first][last]--;
+				getEuler(wordchain, last);
+
+				wordchain.push(dictionary.get(first * 26 + last).remove(0));
+			}
+		}
+	}
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -75,26 +93,6 @@ public class WORDCHAIN {
 				System.out.print("IMPOSSIBLE");
 			}
 			System.out.println();
-		}
-	}
-
-	public static boolean isEuler(int[] outdegree, int[] indegree) {
-		int difference = 0;
-		for (int alphabet = 0; alphabet < 26; alphabet++) {
-			difference += Math.abs(outdegree[alphabet] - indegree[alphabet]);
-		}
-
-		return difference == 0 || difference == 2 ? true : false;
-	}
-
-	public static void getEuler(Stack<String> wordchain, int first) {
-		for (int last = 0; last < 26; last++) {
-			if (adj[first][last] > 0) {
-				adj[first][last]--;
-				getEuler(wordchain, last);
-
-				wordchain.push(dictionary.get(first * 26 + last).remove(0));
-			}
 		}
 	}
 }
