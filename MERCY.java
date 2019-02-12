@@ -3,8 +3,6 @@
  * https://algospot.com/judge/problem/read/MERCY
  */
 
-package algospot;
-
 import java.util.Scanner;
 
 public class MERCY {
