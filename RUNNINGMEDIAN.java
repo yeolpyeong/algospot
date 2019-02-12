@@ -3,8 +3,6 @@
  * https://algospot.com/judge/problem/read/RUNNINGMEDIAN
  */
 
-package algospot;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
