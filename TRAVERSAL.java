@@ -3,31 +3,10 @@
  * https://algospot.com/judge/problem/read/TRAVERSAL
  */
 
-package algospot;
-
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class TRAVERSAL {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int C = sc.nextInt();
-		while (C-- > 0) {
-			int N = sc.nextInt();
-			int[] preorder = new int[N];
-			for (int i = 0; i < N; i++) {
-				preorder[i] = sc.nextInt();
-			}
-			int[] inorder = new int[N];
-			for (int i = 0; i < N; i++) {
-				inorder[i] = sc.nextInt();
-			}
-
-			printPostorder(preorder, inorder);
-			System.out.println();
-		}
-	}
-
 	public static void printPostorder(int[] preorder, int[] inorder) {
 		int root = preorder[0];
 		int totalOfNodes = preorder.length;
@@ -51,6 +30,25 @@ public class TRAVERSAL {
 				System.out.print(root + " ");
 			}
 			continue;
+		}
+	}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int C = sc.nextInt();
+		while (C-- > 0) {
+			int N = sc.nextInt();
+			int[] preorder = new int[N];
+			for (int i = 0; i < N; i++) {
+				preorder[i] = sc.nextInt();
+			}
+			int[] inorder = new int[N];
+			for (int i = 0; i < N; i++) {
+				inorder[i] = sc.nextInt();
+			}
+
+			printPostorder(preorder, inorder);
+			System.out.println();
 		}
 	}
 }
