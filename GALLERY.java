@@ -12,6 +12,25 @@ public class GALLERY {
 	static boolean[] visited;
 	static ArrayList<ArrayList<Integer>> adj;
 
+	public static int dfs(int here) {
+		visited[here] = true;
+		int[] children = { 0, 0, 0 };
+		for (int i = 0; i < adj.get(here).size(); i++) {
+			int there = adj.get(here).get(i);
+			if (!visited[there]) {
+				children[dfs(there)]++;
+			}
+		}
+
+		if (children[UNWATCHED] > 0) {
+			installed++;
+			return INSTALLED;
+		} else if (children[INSTALLED] > 0) {
+			return WATCHED;
+		}
+		return UNWATCHED;
+	}
+	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int C = sc.nextInt();
@@ -39,24 +58,5 @@ public class GALLERY {
 
 			System.out.println(installed);
 		}
-	}
-
-	public static int dfs(int here) {
-		visited[here] = true;
-		int[] children = { 0, 0, 0 };
-		for (int i = 0; i < adj.get(here).size(); i++) {
-			int there = adj.get(here).get(i);
-			if (!visited[there]) {
-				children[dfs(there)]++;
-			}
-		}
-
-		if (children[UNWATCHED] > 0) {
-			installed++;
-			return INSTALLED;
-		} else if (children[INSTALLED] > 0) {
-			return WATCHED;
-		}
-		return UNWATCHED;
 	}
 }
