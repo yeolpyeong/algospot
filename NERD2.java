@@ -3,8 +3,6 @@
  * https://algospot.com/judge/problem/read/NERD2
  */
 
-package algospot;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -13,31 +11,6 @@ import java.util.TreeMap;
 
 public class NERD2 {
 	static TreeMap<Integer, Integer> map;
-
-	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int C = Integer.parseInt(br.readLine());
-		while (C-- > 0) {
-			int N = Integer.parseInt(br.readLine());
-			map = new TreeMap<>();
-			int sum = 0;
-			for (int i = 0; i < N; i++) {
-				StringTokenizer st = new StringTokenizer(br.readLine());
-				int x = Integer.parseInt(st.nextToken());
-				int y = Integer.parseInt(st.nextToken());
-
-				map.put(x, y);
-				if (isDominated(x, y)) {
-					map.remove(x);
-				} else {
-					removeDominated(x, y);
-				}
-				sum += map.size();
-			}
-			System.out.println(sum);
-		}
-
-	}
 
 	public static boolean isDominated(int x, int y) {
 		int higher;
@@ -65,5 +38,30 @@ public class NERD2 {
 				break;
 			}
 		}
+	}
+
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int C = Integer.parseInt(br.readLine());
+		while (C-- > 0) {
+			int N = Integer.parseInt(br.readLine());
+			map = new TreeMap<>();
+			int sum = 0;
+			for (int i = 0; i < N; i++) {
+				StringTokenizer st = new StringTokenizer(br.readLine());
+				int x = Integer.parseInt(st.nextToken());
+				int y = Integer.parseInt(st.nextToken());
+
+				map.put(x, y);
+				if (isDominated(x, y)) {
+					map.remove(x);
+				} else {
+					removeDominated(x, y);
+				}
+				sum += map.size();
+			}
+			System.out.println(sum);
+		}
+
 	}
 }
