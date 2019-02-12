@@ -3,8 +3,6 @@
  * https://algospot.com/judge/problem/read/GALLERY
  */
 
-package algospot;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
