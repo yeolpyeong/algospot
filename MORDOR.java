@@ -3,14 +3,37 @@
  * https://algospot.com/judge/problem/read/MORDOR
  */
 
-package algospot;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class MORDOR {
+	public static int generateSegmentTree(int[] h, int[] segmentTree, int node, int left, int right) {
+		if (left == right) {
+			return segmentTree[node] = h[left];
+		}
+
+		int middle = (left + right) / 2;
+		int maxLeft = generateSegmentTree(h, segmentTree, 2 * node + 1, left, middle);
+		int maxRight = generateSegmentTree(h, segmentTree, 2 * node + 2, middle + 1, right);
+		return segmentTree[node] = Math.max(maxLeft, maxRight);
+	}
+
+	public static int query(int[] segmentTree, int a, int b, int node, int left, int right) {
+		if (a > right || b < left) {
+			return Integer.MIN_VALUE;
+		}
+
+		if (a <= left && b >= right) {
+			return segmentTree[node];
+		}
+
+		int middle = (left + right) / 2;
+		return Math.max(query(segmentTree, a, b, 2 * node + 1, left, middle),
+				query(segmentTree, a, b, 2 * node + 2, middle + 1, right));
+	}
+
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int C = Integer.parseInt(br.readLine());
@@ -40,30 +63,5 @@ public class MORDOR {
 				System.out.println(query(maxSegmentTree, a, b, 0, 0, N - 1) + query(minSegmentTree, a, b, 0, 0, N - 1));
 			}
 		}
-	}
-
-	public static int generateSegmentTree(int[] h, int[] segmentTree, int node, int left, int right) {
-		if (left == right) {
-			return segmentTree[node] = h[left];
-		}
-
-		int middle = (left + right) / 2;
-		int maxLeft = generateSegmentTree(h, segmentTree, 2 * node + 1, left, middle);
-		int maxRight = generateSegmentTree(h, segmentTree, 2 * node + 2, middle + 1, right);
-		return segmentTree[node] = Math.max(maxLeft, maxRight);
-	}
-
-	public static int query(int[] segmentTree, int a, int b, int node, int left, int right) {
-		if (a > right || b < left) {
-			return Integer.MIN_VALUE;
-		}
-
-		if (a <= left && b >= right) {
-			return segmentTree[node];
-		}
-
-		int middle = (left + right) / 2;
-		return Math.max(query(segmentTree, a, b, 2 * node + 1, left, middle),
-				query(segmentTree, a, b, 2 * node + 2, middle + 1, right));
 	}
 }
