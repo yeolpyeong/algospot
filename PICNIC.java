@@ -1,6 +1,6 @@
 
 /*
- * ╪ргЁ
+ * Л├▄М▓█
  * https://algospot.com/judge/problem/read/PICNIC
  */
 
