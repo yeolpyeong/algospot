@@ -1,6 +1,6 @@
 
 /*
- * °ÔÀÓÆÇ µ¤±â
+ * ê²Œì„íŒ ë®ê¸°
  * https://algospot.com/judge/problem/read/BOARDCOVER
  */
 
