@@ -42,6 +42,7 @@ public class BOARDCOVER {
 		if (cy == -1) {
 			return 1;
 		}
+		
 		int count = 0;
 		for (int type = 0; type < 4; type++) {
 			if (set(board, cy, cx, type, 1)) {
