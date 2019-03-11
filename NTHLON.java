@@ -56,9 +56,9 @@ class NTHLON {
 				continue;
 			}
 
-			for (int i = 0; i < adj.get(here).size(); i++) {
-				int there = adj.get(here).get(i).v;
-				int nextDist = minute + adj.get(here).get(i).m;
+			for (Edge e : adj.get(here)) {
+				int there = e.v;
+				int nextDist = minute + e.m;
 
 				if (nextDist < dist[there]) {
 					dist[there] = nextDist;
