@@ -1,6 +1,6 @@
 
 /*
- * √∂¿Œ N¡æ ∞Ê±‚
+ * Ï≤†Ïù∏ NÏ¢Ö Í≤ΩÍ∏∞
  * https://algospot.com/judge/problem/read/NTHLON
  */
 
