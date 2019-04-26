@@ -6,7 +6,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class TRAVERSAL {
+class TRAVERSAL {
 	public static void printPostorder(int[] preorder, int[] inorder) {
 		int root = preorder[0];
 		int totalOfNodes = preorder.length;
