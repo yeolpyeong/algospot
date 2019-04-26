@@ -1,3 +1,4 @@
+
 /*
  * 너드인가, 너드가 아닌가? 2
  * https://algospot.com/judge/problem/read/NERD2
@@ -9,10 +10,10 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 import java.util.TreeMap;
 
-public class NERD2 {
+class NERD2 {
 	static TreeMap<Integer, Integer> map;
 
-	public static boolean isDominated(int x, int y) {
+	static boolean isDominated(int x, int y) {
 		int higher;
 		if (map.higherKey(x) == null) {
 			return false;
@@ -22,7 +23,7 @@ public class NERD2 {
 		return y < map.get(higher);
 	}
 
-	public static void removeDominated(int x, int y) {
+	static void removeDominated(int x, int y) {
 		while (true) {
 			int lower, temp = x;
 			if (map.lowerKey(temp) == null) {
